@@ -13,7 +13,7 @@ class BasePage():
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-    def is_element_present(self, how, what):
+    def is_element_present(self):
         try:
             self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")
         except (NoSuchElementException):

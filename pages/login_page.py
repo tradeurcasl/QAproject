@@ -14,9 +14,9 @@ class LoginPage(BasePage):
         assert str==str.find("login"), 'There is no login in url'
 
     def should_be_login_form(self):
-        form = self.browser.find_element(LoginPageLocators.LOG_IN)
+        form = self.browser.find_element(*LoginPageLocators.LOG_IN)
         assert True, "There is no login form"
 
     def should_be_register_form(self):
-        fom = self.browser.find_element(LoginPageLocators.REG_IN)
+        fom = self.browser.find_element(*LoginPageLocators.REG_IN)
         assert True, 'There is no registration form'
