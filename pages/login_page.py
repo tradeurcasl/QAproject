@@ -10,13 +10,12 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        str = self.browser.current_url()
-        assert str==str.find("login"), 'There is no login in url'
+        assert 'login' in self.browser.current_url, 'There is no login in url'
 
     def should_be_login_form(self):
-        form = self.browser.find_element(*LoginPageLocators.LOG_IN)
+        self.browser.find_element(*LoginPageLocators.LOG_IN)
         assert True, "There is no login form"
 
     def should_be_register_form(self):
-        fom = self.browser.find_element(*LoginPageLocators.REG_IN)
+        self.browser.find_element(*LoginPageLocators.REG_IN)
         assert True, 'There is no registration form'
