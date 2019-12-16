@@ -16,3 +16,6 @@ class LoginPageLocators():
     LOG_IN = [By.CSS_SELECTOR, '#login_form']
     REG_IN = [By.CSS_SELECTOR, '#register_form']
 
+class PageObjectLocators():
+    ADD = [By.XPATH, '//*[@id="add_to_basket_form"]/button']
+
