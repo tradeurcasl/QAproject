@@ -2,6 +2,7 @@ from .base_page import BasePage
 from .locators import ProductPageLocators
 
 
+
 class ProductPage(BasePage):
     def add_to_cart(self, is_promo=False) -> None:
         self.browser.find_element(

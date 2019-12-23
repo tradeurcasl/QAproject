@@ -5,6 +5,7 @@ class BasePageLocators():
     LOGIN_LINK_INVALID = [By.CSS_SELECTOR, "#login_link_inc"]
     CART_LINK=[By.CSS_SELECTOR, 'span.btn-group']
     CART_EMPTY =[By.XPATH, "//*[@id='content_inner']/p/text()"]
+    USER_ICON = [By.CSS_SELECTOR, ".icon-user"]
 
 class LoginPageLocators():
     LOGIN_LINK = [By.CSS_SELECTOR, '#login_link']
@@ -18,11 +19,12 @@ class LoginPageLocators():
     LOG_IN = [By.CSS_SELECTOR, '#login_form']
     REG_IN = [By.CSS_SELECTOR, '#register_form']
 
+
 class ProductPageLocators:
     BUTTON_ADD_TO_BASKET = [By.CSS_SELECTOR, "button.btn-add-to-basket"]
     ALERT_ADDED_TO_CART = [By.CSS_SELECTOR, "div.alertinner"]
     MESSAGE_ABOUT_ADDING = [By.CSS_SELECTOR, "div.alertinner"]
     PRODUCT_NAME = [By.CSS_SELECTOR, "div.product_main h1"]
     MESSAGE_BASKET_TOTAL = [By.CSS_SELECTOR, ".alert-info .alertinner strong"]
-    PRODUCT_PRICE = [By.CSS_SELECTOR, ".product_main .price_col"]
+    PRODUCT_PRICE = [By.CSS_SELECTOR, ".product_main.price_col"]
     SUCCESS_MESSAGE = [By.XPATH, '//div[contains(@class, "alert-success")]/div[contains(@class,"alertinner")]']
