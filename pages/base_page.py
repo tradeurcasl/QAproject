@@ -8,6 +8,7 @@ import math
 from selenium.webdriver import Remote
 from .locators import ProductPageLocators
 from .locators import BasePageLocators
+import time
 
 class BasePage():
 
@@ -22,12 +23,13 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
+
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
     def is_element_present(self, how, what, timeout=4):
         try:
-            self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")
+            self.browser.find_element(By.CSS_SELECTOR, "#login_link")
         except NoSuchElementException:
             return False
         return True
