@@ -56,7 +56,9 @@ def test_guest_can_add_product_to_cart(browser, pages):
 
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
-    page = BasketPage(browser, link)
+    page = BasePage(browser, link)
     page.open()
     time.sleep(2)
-    page.see_product_in_basket_opened_from_product_page(browser)
+    page.go_to_cart(browser)
+    page = BasketPage(browser, link)
+    page.see_product_in_basket_opened_from_product_page()
