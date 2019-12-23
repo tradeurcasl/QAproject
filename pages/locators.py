@@ -16,6 +16,11 @@ class LoginPageLocators():
     LOG_IN = [By.CSS_SELECTOR, '#login_form']
     REG_IN = [By.CSS_SELECTOR, '#register_form']
 
-class PageObjectLocators():
-    ADD = [By.XPATH, '//*[@id="add_to_basket_form"]/button']
-
+class ProductPageLocators:
+    BUTTON_ADD_TO_BASKET = (By.CSS_SELECTOR, "button.btn-add-to-basket")
+    ALERT_ADDED_TO_CART = (By.CSS_SELECTOR, "div.alertinner")
+    ALERT_CART_STATUS = (By.CSS_SELECTOR, ".alert-noicon.alert-info p")
+    MESSAGE_ABOUT_ADDING = (By.CSS_SELECTOR, "div.alertinner ")
+    PRODUCT_NAME = (By.CSS_SELECTOR, "div.product_main h1")
+    MESSAGE_BASKET_TOTAL = (By.CSS_SELECTOR, ".alert-info .alertinner strong")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
