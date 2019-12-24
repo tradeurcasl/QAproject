@@ -26,5 +26,5 @@ class ProductPageLocators:
     MESSAGE_ABOUT_ADDING = [By.CSS_SELECTOR, "div.alertinner"]
     PRODUCT_NAME = [By.CSS_SELECTOR, "div.product_main h1"]
     MESSAGE_BASKET_TOTAL = [By.CSS_SELECTOR, ".alert-info .alertinner strong"]
-    PRODUCT_PRICE = [By.CSS_SELECTOR, ".product_main.price_col"]
+    PRODUCT_PRICE = [By.XPATH, "//*[@id='content_inner']/article/div[1]/div[2]/p[1]"]
     SUCCESS_MESSAGE = [By.XPATH, '//div[contains(@class, "alert-success")]/div[contains(@class,"alertinner")]']
